@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>新地球储能系统峰谷电价套利计算器</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>新地球储能系统峰谷电价套利计算器</h1>
+        <div class="content">
+            <div class="calculator">
+                <div class="input-group">
+                    <label for="capacity">储能容量 (kWh):</label>
+                    <input type="number" id="capacity" value="215" step="1" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="efficiency">系统效率 (%):</label>
+                    <input type="number" id="efficiency" value="90" step="1" min="0" max="100">
+                </div>
+                <div class="input-group">
+                    <label for="peakValleyDiff">峰谷电价差 (元/kWh):</label>
+                    <input type="number" id="peakValleyDiff" value="0.8778" step="0.0001" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="valleyPrice">谷电价 (元/kWh):</label>
+                    <input type="number" id="valleyPrice" value="0.5" step="0.0001" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="cyclesPerDay">每日充放电次数:</label>
+                    <input type="number" id="cyclesPerDay" value="2" step="1" min="1">
+                </div>
+                <div class="input-group">
+                    <label for="initialInvestment">初始投资 (元):</label>
+                    <input type="number" id="initialInvestment" value="500000" step="1000" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="systemLifespan">系统预期寿命 (年):</label>
+                    <input type="number" id="systemLifespan" value="10" step="1" min="1">
+                </div>
+                <button id="calculateBtn">计算</button>
+            </div>
+            <div id="result" class="result-card"></div>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>

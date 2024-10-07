@@ -1,0 +1,124 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.calculator, .result-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #34495e;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.result-card {
+    display: none;
+}
+
+.result-card p {
+    margin: 10px 0;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.result-card p span:first-child {
+    font-weight: 500;
+    color: #34495e;
+}
+
+.result-card p span:last-child {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .calculator, .result-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    input, button {
+        font-size: 16px; /* 防止iOS自动缩放 */
+    }
+}
